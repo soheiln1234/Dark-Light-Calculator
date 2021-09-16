@@ -1,0 +1,19 @@
+{
+  "name": "dark-light-calculator",
+  "version": "1.0.0",
+  "description": "This Light, Dark mode full functional calculator, colabrate with @danialpezeshpoor",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soheiln1234/Dark-Light-Calculator.git"
+  },
+  "author": "Soheil Nikroo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soheiln1234/Dark-Light-Calculator/issues"
+  },
+  "homepage": "https://github.com/soheiln1234/Dark-Light-Calculator#readme"
+}
