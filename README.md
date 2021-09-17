@@ -11,4 +11,7 @@ We use just  vanila `HTML` , `CSS`, `JS` but maybe use other framework like reac
 
 ## Task's
 
-Maybe in trello.
+- @soheiln1234:
+  - User Interface of calculatore
+ - @danialpezeshpoor:
+    - Functionality of calculator
