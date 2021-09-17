@@ -2,7 +2,7 @@
 
 # Dark-Light-Calculator
 
-This is calculator that have dark. Light mode with all functionality, but this calculator made with @danialpezeshpoor.
+This is calculator that have dark. Light mode with all functionality, but this calculator made with @daniial79.
 
 # Calculator Structure
 
@@ -12,5 +12,5 @@ We use just vanila `HTML` , `CSS`, `JS`,`Sass` but maybe use other framework lik
 
 - @soheiln1234:
   - User Interface of calculatore
-- @danialpezeshpoor:
+- @daniial79:
   - Functionality of calculator
