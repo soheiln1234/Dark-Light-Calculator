@@ -6,7 +6,7 @@ This is calculator that have dark. Light mode with all functionality, but this c
 
 # Calculator Structure
 
-We use just vanila `HTML` , `CSS`, `JS` but maybe use other framework like react in future.
+We use just vanila `HTML` , `CSS`, `JS`,`Sass` but maybe use other framework like react in future.
 
 ## Task's
 
