@@ -4,6 +4,8 @@
 
 This is calculator that have dark. Light mode with all functionality, but this calculator collaborate with @daniial79.
 
+- Link: https://calculator-b4658.web.app/
+
 # Calculator Structure
 
 We use just vanila `HTML` , `CSS`, `JS`,`Sass` but maybe use other framework like react in future.
