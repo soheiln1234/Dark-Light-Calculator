@@ -1,0 +1,694 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #22252d;
+  color: #3f424a;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #e9e9e9;
+}
+
+.dark-mode .calculator {
+  width: 20vw;
+  height: 90vh;
+  min-width: 15vw;
+  background-color: #22252d;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  -webkit-animation: calculatorFadeInAnime 1s 0.5s forwards ease-in-out;
+          animation: calculatorFadeInAnime 1s 0.5s forwards ease-in-out;
+}
+
+.dark-mode .calculator .theme {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dark-mode .calculator .theme .theme-container {
+  margin-top: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 110px;
+  height: 40px;
+  background-color: #292d36;
+  border-radius: 20px;
+}
+
+.dark-mode .calculator .theme .theme-container .theme__light {
+  fill: #94969a;
+}
+
+.dark-mode .calculator .theme .theme-container .theme__light:hover {
+  cursor: pointer;
+}
+
+.dark-mode .calculator .theme .theme-container .theme__dark {
+  fill: #fff;
+}
+
+.dark-mode .calculator .theme .theme-container .theme__dark:hover {
+  cursor: pointer;
+}
+
+.dark-mode .calculator .display-container {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.dark-mode .calculator .display-container .display {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  padding-left: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dark-mode .calculator .display-container .display .display__history {
+  width: 100%;
+  height: 50%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 1rem;
+  color: #94969a;
+  font-weight: 700;
+}
+
+.dark-mode .calculator .display-container .display .display__history .display__history-text {
+  font-size: 1rem;
+  padding-left: 2rem;
+}
+
+.dark-mode .calculator .display-container .display .display__result {
+  width: 100%;
+  height: 50%;
+  text-align: left;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.dark-mode .calculator .display-container .display .display__result .display__result-text {
+  font-size: 3rem;
+  padding-left: 2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dark-mode .calculator .keys {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #292d36;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.dark-mode .calculator .keys .keys-container {
+  width: 90%;
+  height: 90%;
+  -webkit-animation: keysFadeInAnime 1s 1s forwards ease-in-out;
+          animation: keysFadeInAnime 1s 1s forwards ease-in-out;
+}
+
+.dark-mode .calculator .keys .keys-container .keys__row {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.dark-mode .calculator .keys .keys-container .keys__row .key {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #272b33;
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
+
+.dark-mode .calculator .keys .keys-container .keys__row .key .key-undo {
+  fill: #fff;
+}
+
+.dark-mode .calculator .keys .keys-container .keys__row .opreator {
+  color: #db6161;
+}
+
+.dark-mode .calculator .keys .keys-container .keys__row .function {
+  color: #26ccb0;
+}
+
+@media screen and (max-width: 769px) {
+  .dark-mode .calculator {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .dark-mode .calculator .keys {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .dark-mode .calculator {
+    width: 50vw;
+    height: 100vh;
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-animation-duration: none;
+            animation-duration: none;
+  }
+  .dark-mode .calculator .keys {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .dark-mode .calculator {
+    width: 40vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .dark-mode .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .dark-mode .calculator {
+    width: 35vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .dark-mode .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dark-mode .calculator {
+    width: 30vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .dark-mode .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .dark-mode .calculator {
+    width: 25vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .dark-mode .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .dark-mode .calculator {
+    width: 22vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .dark-mode .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+.calculator {
+  width: 20vw;
+  height: 90vh;
+  min-width: 15vw;
+  background-color: #fff;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  -webkit-animation: calculatorFadeInAnime 1s 0.5s forwards ease-in-out;
+          animation: calculatorFadeInAnime 1s 0.5s forwards ease-in-out;
+}
+
+.calculator .theme {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calculator .theme .theme-container {
+  margin-top: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 110px;
+  height: 40px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+}
+
+.calculator .theme .theme-container .theme__light {
+  fill: #53575d;
+}
+
+.calculator .theme .theme-container .theme__light:hover {
+  cursor: pointer;
+}
+
+.calculator .theme .theme-container .theme__dark {
+  fill: #b6b6b6;
+}
+
+.calculator .theme .theme-container .theme__dark:hover {
+  cursor: pointer;
+}
+
+.calculator .display-container {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.calculator .display-container .display {
+  height: 100%;
+  width: 100%;
+  color: #292d36;
+  padding-left: 0rem;
+}
+
+.calculator .display-container .display .display__history {
+  width: 100%;
+  height: 50%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 1rem;
+  color: #6a6c73;
+  font-weight: 700;
+}
+
+.calculator .display-container .display .display__history .display__history-text {
+  font-size: 1rem;
+  padding-left: 2rem;
+}
+
+.calculator .display-container .display .display__result {
+  width: 100%;
+  height: 50%;
+  text-align: left;
+  font-weight: 700;
+  text-overflow: ellipsis;
+}
+
+.calculator .display-container .display .display__result .display__result-text {
+  padding-left: 2rem;
+  font-size: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calculator .keys {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f1f1f1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.calculator .keys .keys-container {
+  width: 90%;
+  height: 90%;
+  opacity: 0;
+  -webkit-animation: keysFadeInAnime 1s 1s forwards ease-in-out;
+          animation: keysFadeInAnime 1s 1s forwards ease-in-out;
+}
+
+.calculator .keys .keys-container .keys__row {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  color: #3f424a;
+}
+
+.calculator .keys .keys-container .keys__row .key {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
+
+.calculator .keys .keys-container .keys__row .key .key-undo {
+  fill: #3f424a;
+}
+
+.calculator .keys .keys-container .keys__row .opreator {
+  color: #db6161;
+}
+
+.calculator .keys .keys-container .keys__row .function {
+  color: #47fada;
+}
+
+@media screen and (max-width: 769px) {
+  .calculator {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-animation-duration: none;
+            animation-duration: none;
+  }
+  .calculator .keys {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .calculator {
+    width: 50vw;
+    height: 100vh;
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-animation-duration: none;
+            animation-duration: none;
+  }
+  .calculator .keys {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .calculator {
+    width: 40vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .calculator {
+    width: 35vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .calculator {
+    width: 30vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .calculator {
+    width: 25vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .calculator {
+    width: 22vw;
+    height: 90vh;
+    border-radius: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .calculator .keys {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@-webkit-keyframes calculatorFadeInAnime {
+  from {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes calculatorFadeInAnime {
+  from {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes keysFadeInAnime {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes keysFadeInAnime {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
