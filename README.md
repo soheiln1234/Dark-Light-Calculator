@@ -1,18 +1,18 @@
-![Calculator UI Design](https://github.com/soheiln1234/Dark-Light-Calculator/blob/master/Calculator.png)
+![Calculator UI Design](https://github.com/soheilnikroo/Phone-Book/blob/master/preview-phonebook.png)
 
-# Dark-Light-Calculator
+# PhoneBook
 
-This is calculator that have dark. Light mode with all functionality, but this calculator collaborate with @daniial79.
+This is phonebbok that just for mobile phone not for desktop, and this phoneBook collaborate with @daniial79.
 
-- Link: https://calculator-b4658.web.app/
+- Link: coming soon...
 
-# Calculator Structure
+# PhoneBook Structure
 
-We use just vanila `HTML` , `CSS`, `JS`,`Sass` but maybe use other framework like react in future.
+We use  `React` , `Node`, `Express` in this project.
 
 ## Task's
 
 - @soheiln1234:
-  - User Interface of calculatore
+  - User Interface of PhoenBook
 - @daniial79:
-  - Functionality of calculator
+  - All of the back end stuf
